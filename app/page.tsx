@@ -1,9 +1,14 @@
+import { Categories, Container } from '@/components/shared'
+import { Title } from '@/components/shared/typography'
+
 export default function Home() {
     return (
-        <div>
-            <main>
-                <div className="flex m-2"></div>
-            </main>
-        </div>
+        <>
+            <Container className="mt-10">
+                <Title text="Все пиццы" size="lg" className="font-extrabold" />
+
+                <Categories />
+            </Container>
+        </>
     )
 }
