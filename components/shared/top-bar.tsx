@@ -2,7 +2,7 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/shared/container'
 import { Categories } from '@/components/shared/categories'
-import { SortPopup } from '@/components/shared/popups'
+import { SortPopup } from '@/components/shared/sort-popup'
 
 interface Props {
     className?: string
