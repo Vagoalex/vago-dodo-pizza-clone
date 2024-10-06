@@ -1,9 +1,9 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
+import { cn } from '@/lib/utils';
+import React from 'react';
 
 interface Props {
-    className?: string
-    children?: string
+    className?: string;
+    children?: string;
 }
 
 const categoriesItems = [
@@ -15,8 +15,8 @@ const categoriesItems = [
     'Напитки',
     'Десерты',
     'Десерты',
-]
-const activeIndex = 0
+];
+const activeIndex = 0;
 
 export const Categories: React.FC<Props> = ({ className }) => {
     return (
@@ -40,5 +40,5 @@ export const Categories: React.FC<Props> = ({ className }) => {
                 </a>
             ))}
         </div>
-    )
-}
+    );
+};

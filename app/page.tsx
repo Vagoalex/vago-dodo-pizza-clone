@@ -1,7 +1,8 @@
-import { Container, TopBar } from '@/components/shared'
-import { Title } from '@/components/shared/typography'
-import { Filters } from '@/components/shared/filters'
+import { Container, TopBar } from '@/components/shared';
+import { Title } from '@/components/shared/typography';
+import { Filters } from '@/components/shared/filters';
 
+// TODO: остановился на 1:18:52
 export default function Home() {
     return (
         <>
@@ -27,5 +28,5 @@ export default function Home() {
                 </div>
             </Container>
         </>
-    )
+    );
 }

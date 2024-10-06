@@ -1,12 +1,12 @@
-import React from 'react'
-import { cn } from '@/lib/utils'
-import { Container } from '@/components/shared/index'
-import { Button } from '@/components/ui'
-import Image from 'next/image'
-import { User, ArrowRight, ShoppingCart } from 'lucide-react'
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Container } from '@/components/shared/index';
+import { Button } from '@/components/ui';
+import Image from 'next/image';
+import { User, ArrowRight, ShoppingCart } from 'lucide-react';
 
 interface Props {
-    className?: string
+    className?: string;
 }
 // TODO: Остановился на 45:25
 export const Header: React.FC<Props> = ({ className }) => {
@@ -61,5 +61,5 @@ export const Header: React.FC<Props> = ({ className }) => {
                 </div>
             </Container>
         </header>
-    )
-}
+    );
+};
