@@ -1,8 +1,66 @@
 import { cn } from '@/lib/utils';
 import React from 'react';
 import { Title } from '@/components/shared/typography';
-import { FilterCheckbox } from '@/components/shared/fields';
+import {
+    CheckboxFiltersGroup,
+    FilterCheckbox,
+} from '@/components/shared/fields';
 import { Input, RangeSlider } from '@/components/ui';
+import { CheckboxFiltersGroupItem } from '@/components/shared/fields/checkbox-filters-group';
+
+const defaultItems: CheckboxFiltersGroupItem[] = [
+    {
+        text: 'Сырный соус',
+        value: '1',
+    },
+    {
+        text: 'Моццарелла',
+        value: '2',
+    },
+    {
+        text: 'Чеснок',
+        value: '3',
+    },
+    {
+        text: 'Солённые огурчики',
+        value: '4',
+    },
+    {
+        text: 'Красный лук',
+        value: '5',
+    },
+    {
+        text: 'Томаты',
+        value: '6',
+    },
+];
+
+const additionalItems: CheckboxFiltersGroupItem[] = [
+    {
+        text: 'Томатный соус',
+        value: '7',
+    },
+    {
+        text: 'Гаргонзолла',
+        value: '8',
+    },
+    {
+        text: 'Укроп',
+        value: '9',
+    },
+    {
+        text: 'Солённые молосольные огурчики',
+        value: '10',
+    },
+    {
+        text: 'Зеленый лук',
+        value: '11',
+    },
+    {
+        text: 'Свежие огурчики',
+        value: '12',
+    },
+];
 
 interface Props {
     className?: string;
@@ -39,6 +97,14 @@ export const Filters: React.FC<Props> = ({ className }) => {
                 </div>
                 <RangeSlider min={0} max={5000} step={10} value={[0, 5000]} />
             </div>
+
+            <CheckboxFiltersGroup
+                title="Ингредиенты:"
+                className="mt-5"
+                limit={6}
+                defaultItems={defaultItems}
+                items={[...defaultItems, ...additionalItems]}
+            />
         </div>
     );
 };
