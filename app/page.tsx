@@ -1,7 +1,6 @@
 import { Container, TopBar } from '@/components/shared';
 import { Title } from '@/components/shared/typography';
 import { Filters } from '@/components/shared/filters';
-import { ProductCard } from '@/components/shared/cards';
 import { ProductsGroupList } from '@/components/shared/lists';
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
             <TopBar />
 
             <Container className="mt-10 pb-14">
-                <div className="flex gap-[60px]">
+                <div className="flex gap-[80px]">
                     {/* Фильтрация */}
                     <div className="w-[250px]">
                         <Filters />
