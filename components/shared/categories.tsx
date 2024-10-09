@@ -1,24 +1,27 @@
+'use client';
+
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { useCategoryStore } from '@/store/category/categoryStore';
+import { Category } from '@/types/global';
 
 interface Props {
     className?: string;
-    children?: string;
 }
 
-const categoriesItems = [
-    'Пиццы',
-    'Комбо',
-    'Закуски',
-    'Коктейли',
-    'Кофе',
-    'Напитки',
-    'Десерты',
-    'Десерты',
+const categoriesItems: Category[] = [
+    { id: 1, title: { rus: 'Пиццы' }, name: 'pizzas' },
+    { id: 2, title: { rus: 'Комбо' }, name: 'combos' },
+    { id: 3, title: { rus: 'Закуски' }, name: 'combos' },
+    { id: 4, title: { rus: 'Коктейли' }, name: 'cocktails' },
+    { id: 5, title: { rus: 'Кофе' }, name: 'coffee' },
+    { id: 6, title: { rus: 'Напитки' }, name: 'drinks' },
+    { id: 7, title: { rus: 'Десерты' }, name: 'desserts' },
 ];
-const activeIndex = 0;
 
 export const Categories: React.FC<Props> = ({ className }) => {
+    const { activeCategoryId } = useCategoryStore();
+
     return (
         <div
             className={cn(
@@ -26,17 +29,17 @@ export const Categories: React.FC<Props> = ({ className }) => {
                 className
             )}
         >
-            {categoriesItems.map((categoryItem, index) => (
+            {categoriesItems.map((categoryItem) => (
                 <a
-                    href=""
-                    key={index}
+                    href={`/#${categoryItem.name}`}
+                    key={categoryItem.id}
                     className={cn(
                         'flex items-center font-bold h-11 rounded-2xl px-5',
-                        activeIndex === index &&
+                        activeCategoryId === categoryItem.id &&
                             'bg-white shadow-md shadow-gray-200 text-primary'
                     )}
                 >
-                    <button>{categoryItem}</button>
+                    <button>{categoryItem.title.rus}</button>
                 </a>
             ))}
         </div>

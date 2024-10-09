@@ -23,8 +23,11 @@ export default function Home() {
                     <div className="flex-1">
                         <div className="flex flex-col gap-16">
                             <ProductsGroupList
-                                title="Пиццы"
-                                categoryId={0}
+                                category={{
+                                    id: 1,
+                                    title: { rus: 'Пиццы' },
+                                    name: 'pizzas',
+                                }}
                                 items={[
                                     {
                                         id: '0',
@@ -53,7 +56,7 @@ export default function Home() {
                                             'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
                                     },
                                     {
-                                        id: '0',
+                                        id: '1',
                                         name: 'Сырный цыпленок',
                                         ingredients: [
                                             'цыпленок',
@@ -78,6 +81,94 @@ export default function Home() {
                                         imageUrl:
                                             'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
                                     },
+                                    {
+                                        id: '2',
+                                        name: 'Сырный цыпленок',
+                                        ingredients: [
+                                            'цыпленок',
+                                            'моцарелла',
+                                            'сыры чеддер и пармезан',
+                                            'сырный соус',
+                                            'томаты',
+                                            'соус альфредо',
+                                            'чеснок',
+                                        ],
+                                        items: [
+                                            {
+                                                price: 100,
+                                            },
+                                            {
+                                                price: 300,
+                                            },
+                                            {
+                                                price: 500,
+                                            },
+                                        ],
+                                        imageUrl:
+                                            'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
+                                    },
+                                    {
+                                        id: '3',
+                                        name: 'Сырный цыпленок',
+                                        ingredients: [
+                                            'цыпленок',
+                                            'моцарелла',
+                                            'сыры чеддер и пармезан',
+                                            'сырный соус',
+                                            'томаты',
+                                            'соус альфредо',
+                                            'чеснок',
+                                        ],
+                                        items: [
+                                            {
+                                                price: 100,
+                                            },
+                                            {
+                                                price: 300,
+                                            },
+                                            {
+                                                price: 500,
+                                            },
+                                        ],
+                                        imageUrl:
+                                            'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
+                                    },
+                                    {
+                                        id: '4',
+                                        name: 'Сырный цыпленок',
+                                        ingredients: [
+                                            'цыпленок',
+                                            'моцарелла',
+                                            'сыры чеддер и пармезан',
+                                            'сырный соус',
+                                            'томаты',
+                                            'соус альфредо',
+                                            'чеснок',
+                                        ],
+                                        items: [
+                                            {
+                                                price: 100,
+                                            },
+                                            {
+                                                price: 300,
+                                            },
+                                            {
+                                                price: 500,
+                                            },
+                                        ],
+                                        imageUrl:
+                                            'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
+                                    },
+                                ]}
+                            />
+
+                            <ProductsGroupList
+                                category={{
+                                    id: 2,
+                                    title: { rus: 'Комбо' },
+                                    name: 'combos',
+                                }}
+                                items={[
                                     {
                                         id: '0',
                                         name: 'Сырный цыпленок',
@@ -105,7 +196,7 @@ export default function Home() {
                                             'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
                                     },
                                     {
-                                        id: '0',
+                                        id: '1',
                                         name: 'Сырный цыпленок',
                                         ingredients: [
                                             'цыпленок',
@@ -131,7 +222,59 @@ export default function Home() {
                                             'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
                                     },
                                     {
-                                        id: '0',
+                                        id: '2',
+                                        name: 'Сырный цыпленок',
+                                        ingredients: [
+                                            'цыпленок',
+                                            'моцарелла',
+                                            'сыры чеддер и пармезан',
+                                            'сырный соус',
+                                            'томаты',
+                                            'соус альфредо',
+                                            'чеснок',
+                                        ],
+                                        items: [
+                                            {
+                                                price: 100,
+                                            },
+                                            {
+                                                price: 300,
+                                            },
+                                            {
+                                                price: 500,
+                                            },
+                                        ],
+                                        imageUrl:
+                                            'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
+                                    },
+                                    {
+                                        id: '3',
+                                        name: 'Сырный цыпленок',
+                                        ingredients: [
+                                            'цыпленок',
+                                            'моцарелла',
+                                            'сыры чеддер и пармезан',
+                                            'сырный соус',
+                                            'томаты',
+                                            'соус альфредо',
+                                            'чеснок',
+                                        ],
+                                        items: [
+                                            {
+                                                price: 100,
+                                            },
+                                            {
+                                                price: 300,
+                                            },
+                                            {
+                                                price: 500,
+                                            },
+                                        ],
+                                        imageUrl:
+                                            'https://media.dodostatic.net/image/r:584x584/11EE7D614CBE0530B7234B6D7A6E5F8E.avif',
+                                    },
+                                    {
+                                        id: '4',
                                         name: 'Сырный цыпленок',
                                         ingredients: [
                                             'цыпленок',
