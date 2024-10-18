@@ -2,8 +2,8 @@ import { Prisma } from '@prisma/client';
 import { hashSync } from 'bcrypt';
 import { prisma } from '@/prisma/prisma-client';
 
-export class UserService {
-    public static getBaseUsers(): Prisma.UserCreateInput[] {
+export class UsersService {
+    public static getBaseItems(): Prisma.UserCreateInput[] {
         return [
             {
                 fullName: 'User TEST',
@@ -22,9 +22,9 @@ export class UserService {
         ];
     }
 
-    public static async createBaseUsers() {
+    public static async createBaseItems() {
         await prisma.user.createMany({
-            data: this.getBaseUsers(),
+            data: this.getBaseItems(),
         });
     }
 

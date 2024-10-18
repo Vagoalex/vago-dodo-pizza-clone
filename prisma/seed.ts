@@ -1,11 +1,13 @@
 import { prisma } from '@/prisma/prisma-client';
-import { UserService } from '@/prisma/services/user.service';
-import { CategoryService } from '@/prisma/services/category.service';
+import { UsersService } from '@/prisma/services/users.service';
+import { CategoriesService } from '@/prisma/services/categories.service';
 import { CommonService } from '@/prisma/services/common.service';
+import { IngredientsService } from '@/prisma/services/ingredients.service';
 
 async function generate() {
-    await UserService.createBaseUsers();
-    await CategoryService.createBaseCategories();
+    await UsersService.createBaseItems();
+    await CategoriesService.createBaseItems();
+    await IngredientsService.createBaseItems();
 }
 
 async function clear() {

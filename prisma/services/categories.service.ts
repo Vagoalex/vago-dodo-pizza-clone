@@ -2,14 +2,14 @@ import { Prisma } from '@prisma/client';
 import { prisma } from '@/prisma/prisma-client';
 import { categories } from '@/prisma/constants/categories.constants';
 
-export class CategoryService {
-    private static getBaseCategories(): Prisma.CategoryCreateInput[] {
+export class CategoriesService {
+    private static getBaseItems(): Prisma.CategoryCreateManyInput[] {
         return categories;
     }
 
-    public static async createBaseCategories() {
+    public static async createBaseItems() {
         await prisma.category.createMany({
-            data: this.getBaseCategories(),
+            data: this.getBaseItems(),
         });
     }
 
