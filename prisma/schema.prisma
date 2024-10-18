@@ -11,27 +11,28 @@ datasource db {
 model User {
   id Int @id @default(autoincrement())
 
-  fullName String
-  email    String @unique
-  password String
-  role UserRole @default(USER)
+  fullName   String
+  email      String   @unique
+  password   String
+  role       UserRole @default(USER)
   verifiedAt DateTime
 
-  provider String?
+  provider   String?
   providerId String?
 
-  cart  Cart?
-  orders Order[]
+  cart             Cart?
+  orders           Order[]
   verificationCode VerificationCode?
 
-  createdAt        DateTime           @default(now())
-  updatedAt        DateTime           @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Category {
   id Int @id @default(autoincrement())
 
   name     String    @unique
+  title    String    @unique
   products Product[]
 
   createdAt DateTime @default(now())
@@ -42,6 +43,7 @@ model Product {
   id Int @id @default(autoincrement())
 
   name     String
+  rusTitle String
   imageUrl String
 
   variants ProductVariant[]
@@ -90,7 +92,7 @@ model Cart {
   id Int @id @default(autoincrement())
 
   user   User? @relation(fields: [userId], references: [id])
-  userId Int? @unique
+  userId Int?  @unique
 
   token String
 
@@ -147,7 +149,7 @@ model VerificationCode {
   id Int @id @default(autoincrement())
 
   user   User @relation(fields: [userId], references: [id])
-  userId Int @unique
+  userId Int  @unique
 
   code String @unique
 
@@ -161,7 +163,6 @@ enum OrderStatus {
   SUCCESSED
   CANCELLED
 }
-
 
 enum UserRole {
   USER
